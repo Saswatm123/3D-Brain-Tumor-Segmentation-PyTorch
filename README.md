@@ -26,5 +26,9 @@ I wanted to preserve color distances while correcting for this color-shifting ph
 </p>
 
 <p align="center">
-  As we can see, regardless of global translation/rotation in RGB space, the Eigenvector Basis representation is the same
+  The second row uses the same image as the first row, with the channels rotated by 1 (RGB -> BRG). This leads to a different Hue while maintaining Saturation & Value, so we can isolate rotation. As we can see, regardless of global translation/rotation in RGB space, the centered Eigenvector Basis representation is the same.
 </p>
+
+Now that we have a better representation of the images, we can start the training. I experimented with many architectures, revolving around the same theme of having an autoencoder pipeline to improve feature representation along with residual pipelines between the encoder/decoder layers to improve upsampling & pixel-specific annotation, and settled on a U-Net architecture. Here is the diagram of my model, created in [NN-SVG](http://alexlenail.me/NN-SVG) & MS Paint.
+
+<img src="display/model_diagram.png" alt="Image not committed yet" width="300" height="300">
