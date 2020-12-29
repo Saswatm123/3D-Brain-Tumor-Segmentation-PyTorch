@@ -31,4 +31,6 @@ I wanted to preserve color distances while correcting for this color-shifting ph
 
 Now that we have a better representation of the images, we can start the training. I experimented with many architectures, revolving around the same theme of having an autoencoder pipeline to improve feature representation along with residual pipelines between the encoder/decoder layers to improve upsampling & pixel-specific annotation, and settled on a U-Net architecture. Here is the diagram of my model, created in [NN-SVG](http://alexlenail.me/NN-SVG) & MS Paint.
 
-<img src="display/model_diagram.png" alt="Image not committed yet" width="300" height="300">
+<p align="center">
+  <img src="display/model_diagram.png" alt="Image not committed yet">
+</p>
